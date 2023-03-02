@@ -1,0 +1,18 @@
+
+.card{
+    background-color:#f0f0f0;
+}
+.btn{
+    background-color:#421c5e;
+    color: white;
+}
+.btn:hover{
+    background-color:none
+}
+.error{
+    color: red;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.pagenotfound{
+    margin:50px;
+}
