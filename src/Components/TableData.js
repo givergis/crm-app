@@ -96,7 +96,7 @@ function TableData(props) {
   <tbody>
   
     {alist?alist.map((value)=>
-      <tr class="table-success">
+      <tr class={value.status=='New'?'table-success':'table-danger'}>
       <td>{value.status}</td>
       <td>{value.name}</td>
       <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">{value.email}</span></td>

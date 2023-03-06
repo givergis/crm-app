@@ -15,7 +15,7 @@ function App() {
   const datas =[{status:'New',name:'Rohan',email:'rohan@gmail.com',phone:'055565478',country:'UAE',interest:'BurjKhalifa',source:'Instagram',date:'02-03-2023',remarks:'He want to buy'},
 {status:'New',name:'Rohan',email:'rohan@gmail.com',phone:'055565478',country:'UAE',interest:'BurjKhalifa',source:'Instagram',date:'02-03-2023',remarks:'He want to buy'},
 {status:'New',name:'Rohan',email:'rohan@gmail.com',phone:'055565478',country:'UAE',interest:'BurjKhalifa',source:'Instagram',date:'02-03-2023',remarks:'He want to buy'},
-{status:'Contacted',name:'Rohan',email:'rohan@gmail.com',phone:'055565478',country:'UAE',interest:'BurjKhalifa',source:'Instagram',date:'02-03-2023',remarks:'He want to buy'},
+{status:'No Answer',name:'Rohan',email:'rohan@gmail.com',phone:'055565478',country:'UAE',interest:'BurjKhalifa',source:'Instagram',date:'02-03-2023',remarks:'He want to buy'},
 {status:'No Answer',name:'Rohan',email:'rohan@gmail.com',phone:'055565478',country:'UAE',interest:'BurjKhalifa',source:'Instagram',date:'02-03-2023',remarks:'He want to buy'}];
 
    
