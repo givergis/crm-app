@@ -9,7 +9,7 @@ import PrivateRoutes from './Components/PrivateRoutes';
 import { useState } from 'react';
 
 function App() {
-  const[logStatus,setLogStatus] = useState("");
+  const[logStatus,setLogStatus] = useState([{email:'',password:''}]);
   const[array,setArray]= useState([]);
 
   const datas =[{status:'New',name:'Rohan',email:'rohan@gmail.com',phone:'055565478',country:'UAE',interest:'BurjKhalifa',source:'Instagram',date:'02-03-2023',remarks:'He want to buy'},
@@ -23,10 +23,10 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Routes><Route path='/' element={<LoginForm/>} />
+      <Routes><Route path='/' element={<LoginForm lstat={logStatus} setlstat={setLogStatus} />} />
       <Route  element={<PrivateRoutes lstat={logStatus} setlstat={setLogStatus}/>}>
-        <Route path='/mainPage' element={<TableData tdata={datas} alist={array} alistSet={setArray}/>} />
-        <Route path='/register' element={<RegisterForm alist={array} alistSet={setArray} />}/>
+        <Route path='/mainPage' element={<TableData tdata={datas} alist={array} alistSet={setArray} setlstat={setLogStatus} />} />
+        <Route path='/register' element={<RegisterForm alist={array} alistSet={setArray}  />}/>
       </Route>
       <Route path='/login' element={<LoginForm  lstat={logStatus} setlstat={setLogStatus} />} />
       <Route path="*" element={<PageNotFound/>} />

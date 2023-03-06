@@ -5,7 +5,7 @@ import {Link, useNavigate } from 'react-router-dom';
 import './TableData.css'
 
 function TableData(props) {
-  const{tdata,alist,alistSet} = props;
+  const{tdata,alist,alistSet,setlstat} = props;
     const navigate = useNavigate();  
 
     const callClick =()=>{
@@ -13,6 +13,7 @@ function TableData(props) {
         navigate('/register')
     }
     const callLogout =()=>{
+      setlstat([""]);
       navigate('/login');
     }
     useEffect(() => {

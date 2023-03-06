@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 
 function LoginForm(props) {
   const{lstat,setlstat}=props;
-    const [input,setInput] = useState("");
+  //  const [input,setInput] = useState([]);
 
     const navigate = useNavigate();  
 
@@ -22,13 +22,14 @@ function LoginForm(props) {
     const onSubmit =(event)=>{
        // event.preventDefault();
        // console.log("Clicked")
-        if(input.email=="geclyn@unclefluffy.com" && input.password=="123456"){
-          setlstat(input);
+        if(lstat.email=="geclyn@unclefluffy.com" && lstat.password=="123456"){
+        //  console.log(lstat);
+          setlstat(lstat);
             alert("Login Success!!")
            navigate('/mainPage');
         }else{
-            alert("Login failed!!")
-            navigate('/login')
+            alert("Login failed!!");
+            navigate('/login');
         }
         //console.log(input)
     }
@@ -48,12 +49,12 @@ function LoginForm(props) {
               <p className="text-black-50 mb-5">Please enter your login and password!</p>
 
               <div className="form-outline form-white mb-4">
-                <input type="email"  {...register("email",{ required: true })} id="typeEmailX" value={input.email} onChange={ event=>setInput({...input,email:event.target.value})}  placeholder='Username' className="form-control form-control-lg" />
+                <input type="email"  {...register("email",{ required: true })} id="typeEmailX" value={lstat.email} onChange={ event=>setlstat({...lstat,email:event.target.value})}  placeholder='Username' className="form-control form-control-lg" />
                 <label className="form-label" for="typeEmailX"><span className='error'>{errors.email && <i>Please fill the input</i>}</span></label>
               </div>
 
               <div className="form-outline form-white mb-6">
-                <input type="password" {...register("password",{ required: true })}  id="typePasswordX" value={input.password} onChange={ event=>setInput({...input,password:event.target.value})}  placeholder='Password' className="form-control form-control-lg" />
+                <input type="password" {...register("password",{ required: true })}  id="typePasswordX" value={lstat.password} onChange={ event=>setlstat({...lstat,password:event.target.value})}  placeholder='Password' className="form-control form-control-lg" />
                 <label className="form-label" for="typePasswordX"><span className='error'>{errors.password && <i>Please fill the input</i>}</span></label>
               </div>
 
